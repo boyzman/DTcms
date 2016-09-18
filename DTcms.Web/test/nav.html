@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript" src="../scripts/jquery/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".nav li").first().addClass("current");
+            $(".nav li").click(function () {
+                $(this).addClass("current").siblings().removeClass("current")
+            });
+        });
+    </script>
+    <style type="text/css">
+        ul.nav {
+            width: 980px;
+            margin: 0px auto;
+        }
+
+            ul.nav li {
+                width: 81px;
+                height: 34px;
+                line-height: 34px;
+                float: left;
+                text-align: center;
+                margin-right: 20px;
+            }
+
+                ul.nav li a {
+                    font-size: 15px;
+                    font-weight: bolder;
+                    color: #90e313;
+                }
+
+                ul.nav li.current {
+                    background-color:red;
+                    background-attachment: scroll;
+                    background-repeat: no-repeat;
+                    background-position: 0px 0px;
+                }
+
+                    ul.nav li.current a {
+                        color:black;
+                    }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul class="nav">
+            <li><a href="#">网站主页</a></li>
+            <li><a href="#">分类目录</a></li>
+            <li><a href="#">文章归档</a></li>
+            <li><a href="#">关于本站</a></li>
+        </ul>
+    </div>
+</body>
+</html>
